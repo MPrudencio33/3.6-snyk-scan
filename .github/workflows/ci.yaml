@@ -52,10 +52,17 @@ jobs:
   ########################################
 
   snyk-checks:
-  - snyk code test
-  - snyk test
-  - snyk iac test
-  - snyk container test <image-name>
+    - name: snyk code test
+      run: snyk code test 
+
+    - name: snyk test
+      run: snyk test
+
+    - name: snyk iac test
+      run: snyk iac test
+
+    - name: snyk container test
+      run: snyk container test snyk-image
   
   status: ${{ job.status }}
   # for use in the summary
