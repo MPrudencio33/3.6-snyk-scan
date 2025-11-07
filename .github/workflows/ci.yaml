@@ -50,7 +50,7 @@ jobs:
   ########################################
   # Add a job for snyk scan of your code #
   ########################################
-    snyk-checks:
+  snyk-checks:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout repository
