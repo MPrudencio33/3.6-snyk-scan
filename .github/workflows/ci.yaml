@@ -51,13 +51,12 @@ jobs:
   # Add a job for snyk scan of your code #
   ########################################
 
-job name: snyk-checks
+  snyk-checks:
   - snyk code test
   - snyk test
   - snyk iac test
   - snyk container test <image-name>
-  # Also, enable:
-  outputs:
+  
   status: ${{ job.status }}
   # for use in the summary
   ########################################
