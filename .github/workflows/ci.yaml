@@ -70,10 +70,10 @@ jobs:
       - name: Run Snyk IaC Test
         run: snyk iac test
 
-  # status: ${{ job.status }}
       - name: Notify on failure
         if: ${{ failure() }}
         run: echo "Snyk check failed!"
+  # status: ${{ job.status }}
   # for use in the summary
   ########################################
   # job name: snyk-checks
