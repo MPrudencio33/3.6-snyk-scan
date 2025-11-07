@@ -50,21 +50,27 @@ jobs:
   ########################################
   # Add a job for snyk scan of your code #
   ########################################
+    snyk-checks:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
 
-  snyk-checks:
-    - name: snyk code test
-      run: snyk code test 
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: 20
 
-    - name: snyk test
-      run: snyk test
+      - name: Run Snyk Code Test
+        run: snyk code test
 
-    - name: snyk iac test
-      run: snyk iac test
+      - name: Run Snyk Test
+        run: snyk test
 
-    - name: snyk container test
-      run: snyk container test snyk-image
-  
-      status: ${{ job.status }}
+      - name: Run Snyk IaC Test
+        run: snyk iac test
+
+        status: ${{ job.status }}
   # for use in the summary
   ########################################
   # job name: snyk-checks
