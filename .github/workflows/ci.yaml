@@ -52,7 +52,6 @@ jobs:
   ########################################
 
 job name: snyk-checks
-  # Enable:
   - snyk code test
   - snyk test
   - snyk iac test
