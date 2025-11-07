@@ -64,7 +64,7 @@ jobs:
     - name: snyk container test
       run: snyk container test snyk-image
   
-  status: ${{ job.status }}
+      status: ${{ job.status }}
   # for use in the summary
   ########################################
   # job name: snyk-checks
