@@ -73,6 +73,7 @@ jobs:
       - name: Notify on failure
         if: ${{ failure() }}
         run: echo "Snyk check failed!"
+        
   # status: ${{ job.status }}
   # for use in the summary
   ########################################
