@@ -75,6 +75,7 @@ jobs:
         run: echo "Snyk check failed!"
       
     if: ${{ needs.test.result == 'success' }}
+    
   # status: ${{ job.status }}
   # for use in the summary
   ########################################
