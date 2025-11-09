@@ -30,6 +30,9 @@ jobs:
       id: fmt
       run: terraform fmt -check
 
+    - name: Initialize Terraform
+      run: terraform init -input=false
+
     - name: Terraform Validate
       id: validate
       run: terraform validate -no-color
