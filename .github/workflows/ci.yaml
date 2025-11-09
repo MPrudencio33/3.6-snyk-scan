@@ -1,4 +1,4 @@
-name: CI
+name: Terraform CI
 run-name: Running Terraform Checks by ${{ github.actor }}
 
 on:
