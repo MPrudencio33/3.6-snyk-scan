@@ -1,11 +1,6 @@
 name: Terraform CI
 run-name: Running Terraform Checks by ${{ github.actor }}
 
-permissions:
-  contents: read
-  pull-requests: write
-  statuses: write
-  
 on:
  pull_request:
    branches:
