@@ -14,7 +14,7 @@ terraform {
       version = "~> 5.0"
     }
   }
-  */
+  
 
   backend "s3" {
     bucket = "sctp-ce11-tfstate"
@@ -22,6 +22,7 @@ terraform {
     region = "us-east-1"
   }
 }
+*/
 
 data "aws_caller_identity" "current" {}
 
